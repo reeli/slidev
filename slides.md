@@ -14,7 +14,6 @@ drawings:
 transition: slide-left
 css: unocss
 ---
-
 # 打造一个追剧 App
 
 ---
@@ -22,7 +21,6 @@ transition: slide-left
 layout: image-left
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
-
 # 视频网站现状
 
 - 超前点播/点映礼
@@ -40,13 +38,11 @@ transition: slide-left
 
 > 第十七条　为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。
 
-
 ---
 transition: slide-left
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
-
 # 技术栈
 
 - Flutter & Dart
@@ -55,15 +51,13 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 transition: slide-left
 ---
-
 # Overview
 
-|        | 功能        | 技术实现    |
-|--------|-----------|---------|
-| Part 1 | 列表页/详情页展示 | 静态资源抓取  |
-| Part 2 | 视频播放      | 视频嗅探    |
-| Part 3 | 投屏        | DLNA 投屏 |
-
+| 章节      | 功能        | 技术实现    |
+|---------|-----------|---------|
+| 1       | 列表页/详情页展示 | 静态资源抓取  |
+| 2 | 视频播放      | 视频嗅探    |
+| 3 | 投屏        | DLNA 投屏 |
 
 ---
 transition: slide-left
@@ -75,13 +69,21 @@ background: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 transition: slide-left
 ---
+# 寻找资源
+[示例网站](https://www.dm530p.net/list/?region=%E4%B8%AD%E5%9B%BD)
+```shell
+curl https://www.dm530p.net/list/\?region\=%E4%B8%AD%E5%9B%BD --output demo.html
+```
 
+---
+transition: slide-left
+---
 # Crawler 配置
 
 <div flex gap-2 m="-t-2" h-110>
 
   ```graphql
- # 类型
+ # 类型（Describe what you want）
   schema {
     query: Query
   }
@@ -117,7 +119,7 @@ transition: slide-left
   ```
   
   ```graphql
-# 配置
+# 配置（Ask for what you need）
   query {
     init(
       siteName: "爱看影视"
@@ -146,257 +148,167 @@ transition: slide-left
 </div>
 
 ---
-transition: slide-up
+transition: slide-left
+layout: two-cols
 ---
+# 指令集
+- _dom_query
+- _dom_query_all
+- _dom_siblings
+- _dom_attr
+- _string_replace
+- _string_extract
+- _string_switch
+- _def
 
-# Components
+::right::
+# Directives
 
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
+- 标记如何获取该数据
+- 通过组合 directives，应对复杂业务场景
+- 通过扩展 Directives，应对需求变化
 
 ---
-class: px-20
+transition: slide-left
 ---
+# 配置解析
+GraphQL AST -> Crawler Config 
 
-
-
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+<img src="/ast.png">
 
 ---
-preload: false
+transition: slide-left
 ---
+# 配置解析
 
-# Animations
+Crawler Config
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
+```json {all} {maxHeight:'420px'}
+{
+  "siteName": "爱看影视",
+  "siteUrl": "https://ikan6.vip",
+  "resources": {
+    "getVideos": {
+      "path": "/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}/",
+      "params": [
+        {
+          "name": "cateId",
+          "defaultValue": "2",
+          "enums": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "name": "area",
+          "defaultValue": ""
+        },
+        {
+          "name": "by",
+          "defaultValue": ""
+        },
+        {
+          "name": "class",
+          "defaultValue": ""
+        },
+        {
+          "name": "catePg",
+          "defaultValue": ""
+        },
+        {
+          "name": "year",
+          "defaultValue": ""
+        }
+      ],
+      "response": {
+        "__type": "Videos",
+        "videos": {
+          "__type": "[Video]",
+          "directives": [
+            {
+              "_domGetAll": {
+                "selector": "div>a[href^='/voddetail']"
+              }
+            }
+          ],
+          "__items": {
+            "__props": {
+              "title": {
+                "__type": "String",
+                "directives": [
+                  {
+                    "_domAttr": {
+                      "name": "title"
+                    }
+                  }
+                ]
+              },
+              "imageUrl": {
+                "__type": "String",
+                "directives": [
+                  {
+                    "_domAttr": {
+                      "name": "data-original"
+                    }
+                  }
+                ]
+              },
+              "detailUrl": {
+                "__type": "String",
+                "directives": [
+                  {
+                    "_domAttr": {
+                      "name": "href"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "page": {
+          "__type": "Page",
+          "total": {
+            "__type": "Int",
+            "directives": [
+              {
+                "_domGetByText": {
+                  "selector": ".myui-page li a",
+                  "text": "尾页"
+                }
+              },
+              {
+                "_domAttr": {
+                  "name": "href"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
   }
 }
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+---
+transition: slide-left
+---
+# 静态资源抓取流程
+<img src="/data_crawl.png">
 
 ---
-src: ./pages/multiple-entries.md
-hide: false
+transition: slide-left
 ---
+# Why GraphQL
+- 相较 JSON 而言，表达更简洁，方便后期维护配置
+- 拥有类型系统，避免配置出错
+- 被多种语言支持，如 Dart/JavaScript/Kotlin，能够快速迁移到其他地方
 
----
-layout: center
-class: text-center
----
+
 
 ---
 transition: slide-up
