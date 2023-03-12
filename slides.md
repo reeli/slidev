@@ -18,7 +18,7 @@ css: unocss
 # 打造一个追剧 App
 
 ---
-transition: fade-out
+transition: slide-left
 layout: image-left
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
@@ -34,7 +34,7 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 - 普通 VIP 用户无法投屏/投屏清晰度太低
 
 ---
-transition: slide-up
+transition: slide-left
 ---
 # 计算机软件保护条例
 
@@ -42,7 +42,7 @@ transition: slide-up
 
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
@@ -53,7 +53,7 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 - GraphQL
 
 ---
-transition: fade-out
+transition: slide-left
 ---
 
 # Overview
@@ -64,55 +64,89 @@ transition: fade-out
 | Part 2 | 视频播放      | 视频嗅探    |
 | Part 3 | 投屏        | DLNA 投屏 |
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<div>
-  <img
-    v-click
-    class="absolute -bottom-9 -left-7 w-80 opacity-50"
-    src="https://sli.dev/assets/arrow-bottom-left.svg"
-  />
-  <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+
+---
+transition: slide-left
+layout: cover
+background: https://source.unsplash.com/collection/94734566/1920x1080
+---
+# 静态资源抓取
+
+---
+transition: slide-left
+---
+
+# Crawler 配置
+
+<div flex gap-2 m="-t-2" h-110>
+
+  ```graphql
+ # 类型
+  schema {
+    query: Query
+  }
+  
+  type Query {
+    init(
+      siteName: String!
+      siteUrl: String!
+      listOptions: ListOptions!
+    ): Resources
+  }
+  
+  type Resources {
+    getVideos(path: String!): VideoListData
+  }
+
+  type VideoListData {
+    videos: [VideoData]!
+    totalPage: Int!
+  }
+  
+  type VideoData {
+    title: String!
+    detailUrl: String!
+    imageUrl: String
+  }
+  
+  directive @_dom_attr(name: String!) repeatable on FIELD
+  directive @_dom_query(
+    selector: String!
+    fromDocument: Boolean
+  ) repeatable on FIELD
+  ```
+  
+  ```graphql
+# 配置
+  query {
+    init(
+      siteName: "爱看影视"
+      siteUrl: "https://ikan6.vip"
+      listOptions: {
+        sortBy: "sortBy"
+        pageBy: "catePg"
+        groups: [
+          { name: "国产剧", values: [{ value: "2", key: "cateId" }] }
+          { name: "动漫", values: [{ value: "4", key: "cateId" }] }
+        ]
+      }
+    ) {
+      getVideos(
+        path: "/vodshow/{cateId:2}--{sortBy:time}-----{catePg}---/"
+      ) {
+        videos @_dom_query(selector: ".myui-vodlist") {
+          title @_dom_attr(name: "title")
+          imageUrl @_dom_attr(name: "data-original")
+          detailUrl @_dom_attr(name: "href")
+        }
+      }
+    }
+  }
+  ```
 </div>
+
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Code
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
+transition: slide-up
 ---
 
 # Components
@@ -159,6 +193,9 @@ Also, HTML elements are valid:
 ---
 class: px-20
 ---
+
+
+
 
 # Themes
 
