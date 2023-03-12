@@ -308,7 +308,12 @@ transition: slide-left
 - 拥有类型系统，避免配置出错
 - 被多种语言支持，如 Dart/JavaScript/Kotlin，能够快速迁移到其他地方
 
-
+---
+transition: slide-left
+layout: cover
+background: https://source.unsplash.com/collection/94734566/1920x1080
+---
+# 视频播放
 
 ---
 transition: slide-up
