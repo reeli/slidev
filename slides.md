@@ -19,12 +19,14 @@ css: unocss
 
 ---
 transition: fade-out
+layout: image-left
+image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
 # 视频网站现状
 
 - 超前点播/点映礼
-- 各种独播资源，用户有时需要买购买多家视频会员
+- 各种独播资源，需要买购买多个平台视频会员
 - 会员专属广告
 - 限制多设备登录
 - 普通会员涨价
@@ -34,29 +36,33 @@ transition: fade-out
 ---
 transition: slide-up
 ---
+# 计算机软件保护条例
+
+> 第十七条　为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。
+
+
+---
+transition: slide-up
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
 
 # 技术栈
 
-<div class="flex w-55">
-  <img src="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png" height="200">
-  <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-ar21.png" height="100">
-  <img src="https://graphql.org/img/og-image.png" height="100">
-</div>
-
+- Flutter & Dart
+- GraphQL
 
 ---
 transition: fade-out
 ---
 
 # Overview
-### Keyboard Shortcuts
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+|        | 功能        | 技术实现    |
+|--------|-----------|---------|
+| Part 1 | 列表页/详情页展示 | 静态资源抓取  |
+| Part 2 | 视频播放      | 视频嗅探    |
+| Part 3 | 投屏        | DLNA 投屏 |
 
 <!-- https://sli.dev/guide/animations.html#click-animations -->
 <div>
@@ -355,6 +361,10 @@ layout: center
 class: text-center
 ---
 
-# Learn More
+---
+transition: slide-up
+---
+# 展望
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+- 目前内置数据源，未来考虑只提供工具。工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）
+- 搜索
