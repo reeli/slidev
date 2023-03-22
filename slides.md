@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://images.unsplash.com/photo-1612334001559-947862cc2202?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NDkyNTU2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 fonts:
   sans: "PingFang SC"
   local: "PingFang SC"
@@ -314,6 +314,22 @@ layout: cover
 background: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 # 视频播放
+
+---
+transition: slide-up
+---
+# HLS 流媒体协议 
+
+HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流媒体传输协议，用于音频和视频的实时传输。
+
+原理：
+
+将媒体文件拆分成一系列小的片段，并使用 HTTP 协议来传输这些片段。这些媒体段可以被独立地请求和下载。
+
+组成：
+- HTTP: 传输协议
+- M3U8: 索引文件
+- TS: 音视频的媒体信息
 
 ---
 transition: slide-up
