@@ -19,7 +19,7 @@ css: unocss
 ---
 transition: slide-left
 layout: image-left
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://images.unsplash.com/photo-1617982324703-442ecdc0fbab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
 ---
 # 视频网站现状
 
@@ -41,7 +41,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://images.unsplash.com/photo-1530819568329-97653eafbbfa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NTg3MDI5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 # 技术栈
 
@@ -62,7 +62,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: cover
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 静态资源抓取
 
@@ -311,7 +311,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: cover
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://images.unsplash.com/photo-1619075120156-f5729c752edf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NTg3NTI4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 # 视频播放
 
