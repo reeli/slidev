@@ -316,19 +316,19 @@ background: https://source.unsplash.com/collection/94734566/1920x1080
 # 视频播放
 
 ---
-transition: slide-up
+transition: slide-left
 ---
 # HLS 流媒体协议 
 
 HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流媒体传输协议，用于音频和视频的实时传输。
 
 <div class="flex items-center gap-16">
+  <v-clicks :every='1'>
     <div class="flex-1">
       <img src="/hls.png" width="460">
     </div>
-
-
   <div class="flex-1">
+
   原理：将媒体文件拆分成一系列小的片段，并使用 HTTP 协议来传输这些片段。这些媒体段可以被独立地请求和下载。
 
   组成：
@@ -339,10 +339,19 @@ HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流�
   应用场景：
   - 视频直播/在线教育/视频平台
   </div>
+  </v-clicks>
 </div>
 
 ---
-transition: slide-up
+transition: slide-left
+---
+# 播放链接抓取
+<div class="center middle">
+  <img src="/web_view.png" width="822">
+</div>
+
+---
+transition: slide-left
 ---
 # 展望
 
