@@ -322,14 +322,24 @@ transition: slide-up
 
 HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流媒体传输协议，用于音频和视频的实时传输。
 
-原理：
+<div class="flex items-center gap-16">
+    <div class="flex-1">
+      <img src="/hls.png" width="460">
+    </div>
 
-将媒体文件拆分成一系列小的片段，并使用 HTTP 协议来传输这些片段。这些媒体段可以被独立地请求和下载。
 
-组成：
-- HTTP: 传输协议
-- M3U8: 索引文件
-- TS: 音视频的媒体信息
+  <div class="flex-1">
+  原理：将媒体文件拆分成一系列小的片段，并使用 HTTP 协议来传输这些片段。这些媒体段可以被独立地请求和下载。
+
+  组成：
+  - HTTP: 传输协议
+  - M3U8: 索引文件
+  - TS: 音视频的媒体信息
+
+  应用场景：
+  - 视频直播/在线教育/视频平台
+  </div>
+</div>
 
 ---
 transition: slide-up
