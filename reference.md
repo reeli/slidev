@@ -198,3 +198,28 @@ participant MP as Media Provider
     deactivate P
 
 https://mermaid.live/view#pako:eNptU11LG0EU_SvDPCWQlBZBMA-CJL65ZclaH8q-THbHdGAzk04moSJCNpRGbLVqfBKp2iqBQmv70LS1afpnMpvNv-gkk49dzD7t7jn3nHPvzN2FDnMxzECbVvDLKqYOzhFU5Khk0zLigjikjKgAWYAqIMuo4MwDOVwjDgYJgxWIh5M2LbBXgBcLKLG0lFpeTq2spB4_epIEm1s2BeqJClkjodzG0zVgYV7DHCTkbVN2G8GHC7BWLicfVuRHFXlMXcwJLc7MN7cWcM2ZuumhnUXqSifemTGuMbBLEDA5qxHlY1MtnU2vrloZIN-fDI6-hV978qapASutkOwYGdZ9jfT_XQf-3QjXnLmEOSUGp1-Cs578fNr_2wp_vA7uj3VR4ll-Y9INcgSpIYGBOQkxl8nHZYJ3zf6fm6hXfuLVrcv2W03SgKkAQyHh3c_geyPqr3HDTEdjPiSMceUftj8Nrnz5u9PvXoW9Vth-M_x4In-1QTxGdDg6x-CgE9R9jYPoeOdNHbXlfkc3lQjOG9K_SMba0v90gniqYf18cHmr8WD_WB5cLgwyNpCtQ3l_Nk3g4vi8YQqWMC8h4qqV2B2fJRQvcAnbMKNeXbyNqp6w1bbsKWq17KrKdZcIxmFmG3kVnIKoKpi1Qx2YEbyKp6TJUs1Y6uo9Z2z6vfcf7sZ1Sw
+
+
+DLNA的工作原理是通过建立DLNA服务器和DLNA客户端之间的通信，实现不同设备之间的数据传输和共享。
+
+
+UPnP(Universal Plug and Play): {
+shape: text
+简化设备之间的连接和通信
+}
+DLNA(Digital Living Network Alliance): {
+shape: text
+实现不同设备之间的数据传输和共享
+}
+SSDP(Simple Service Discovery Protocol): {
+shape: text
+用于服务发现
+}
+UDP(User Datagram Protocol): {
+shape: text
+传输数据
+}
+
+DLNA(Digital Living Network Alliance) -> UPnP(Universal Plug and Play)
+UPnP(Universal Plug and Play) -> SSDP(Simple Service Discovery Protocol)
+SSDP(Simple Service Discovery Protocol) -> UDP(User Datagram Protocol)
