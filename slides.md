@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: https://images.unsplash.com/photo-1612334001559-947862cc2202?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NDkyNTU2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
+background: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 fonts:
   sans: "PingFang SC"
   local: "PingFang SC"
@@ -19,7 +19,7 @@ css: unocss
 ---
 transition: slide-left
 layout: image-right
-image: https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
+image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 视频网站现状
 
@@ -36,22 +36,36 @@ transition: slide-left
 ---
 # App 展示
 
+<div class="flex">
+  <div class="flex-1">
+    <img src="/app_home.jpeg"  width="200">
+  </div>
+  <div class="flex-1">
+    <img src="/app_favorite.jpeg" width="200">
+  </div>
+  <div class="flex-1">
+    <img src="/app_detail.jpeg" width="200">
+  </div>
+</div>
 ---
 transition: slide-left
-layout: image-right
-image: https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
+layout: image-left
+image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 计算机软件保护条例
 
 > 第十七条　为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。
 
-<ul class="mt20">
-展望：
-<li>不再内置数据源，未来考虑只提供工具，由用户侧进行数据源配置</li>
-<li>工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）</li>
-</ul>
+<v-clicks>
+  <ul class="mt20 text-grey-500">
+    <li>不再内置数据源，未来考虑只提供工具，由用户侧进行数据源配置</li>
+    <li>工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）</li>
+  </ul>
+</v-clicks>
 ---
 transition: slide-left
+layout: image-left
+image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 技术栈
 
