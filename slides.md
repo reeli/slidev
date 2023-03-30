@@ -33,6 +33,11 @@ image: https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-4.0
 
 ---
 transition: slide-left
+---
+# App 展示
+
+---
+transition: slide-left
 layout: image-right
 image: https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
@@ -40,6 +45,11 @@ image: https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-4.0
 
 > 第十七条　为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。
 
+<ul class="mt20">
+展望：
+<li>不再内置数据源，未来考虑只提供工具，由用户侧进行数据源配置</li>
+<li>工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）</li>
+</ul>
 ---
 transition: slide-left
 ---
@@ -425,29 +435,27 @@ transition: slide-left
 # SSDP
 > 简单服务发现（Simple Service Discovery Protocol，SSDP）是一种基于 UDP 的协议，它允许设备在同一网络上发现彼此的存在，从而实现设备间的通信和协作。SSDP 是 UPnP（Universal Plug and Play）协议的子集。
 
-<img src="/ssdp.png" width="480">
-
+<img src="/ssdp.svg" width="480">
 
 ---
 transition: slide-left
 ---
 # DLNA 原理
-<div class="flex items-center">
-<div class="flex-1">
-  <img src="/dlna.png" >
-</div>
-<ul class="flex-1">
-  <li>服务器：发布资源</li>
-  <li>客户端：从服务器中获取媒体文件并播放</li>
-  <li>控制点：控制播放过程，比如播放、暂停等</li>
-  <li>渲染器：播放资源</li>
-</ul>
-</div>
+
+<img src="/dlna.svg" width="650">
 
 ---
 transition: slide-left
 ---
-# 展望
+# 链接失效
+<div class="flex center">
+  <img src="/cache_pool.svg" width="700">
+</div>
 
-- 目前内置数据源，未来考虑只提供工具。工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）
-- 搜索
+
+---
+transition: slide-left
+---
+# 总结
+
+

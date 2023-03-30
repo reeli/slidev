@@ -139,3 +139,62 @@ C: DLNA渲染器(电视)
 
 B -> C: 1. 发送播放请求并传输媒体文件
 C -> B: 2. 返回播放状态
+
+
+
+---
+Video Provider: {
+A
+B
+}
+
+Cache Pool: {
+FileA: m3u8 content A
+FileB: m3u8 content B
+}
+
+Cache Pool -> DLNA Player
+Cache Pool -> Player
+
+Client -> Video Provider: request url
+Video Provider -> Client: m3u8 content
+Client -> Cache Pool: store data
+
+https://kroki.io/d2/svg/eNoLy0xJzVcIKMovAzKKrBSquRQUHIHYiauWi8s5MTkjVSEgPz8HIuGWmZPqaKWQa1xqoZCcn1eSmlcCVgwSd0ITRzNAQddOwcXHz1EhICexMrUITQYqyOWckwnSCxQJQ3NXUWphaWpxiUJpUQ4XqhxINUQfqguQDEP2R3FJflGqQkpiSSIAlOxPTA==
+
+
+sequenceDiagram
+participant C as Control Device (Mobile)
+
+    participant S as Server (DLNA)
+    participant R as Rendering Device (TV)
+    participant P as Player
+
+participant MP as Media Provider
+
+    C->>S: 发现设备
+    S-->>C: 发送设备信息
+  
+    
+    C->>P: 发送播放媒体资源
+    activate P
+
+   
+    C->>R: 发送播放指令
+    
+    R->>P: 开始播放
+    P->>MP: 请求媒体资源
+    MP-->>P: 发送媒体资源
+    P-->>R: 解码并传视频帧 
+    
+    R-->>C: 发送播放状态
+     
+
+    C->>R: 发送控制指令(暂停)
+    R->>P: 暂停解码
+    P-->>R: 通知暂停成功
+    R-->>C: 发送控制响应
+
+    deactivate P
+
+https://mermaid.live/view#pako:eNptU11LG0EU_SvDPCWQlBZBMA-CJL65ZclaH8q-THbHdGAzk04moSJCNpRGbLVqfBKp2iqBQmv70LS1afpnMpvNv-gkk49dzD7t7jn3nHPvzN2FDnMxzECbVvDLKqYOzhFU5Khk0zLigjikjKgAWYAqIMuo4MwDOVwjDgYJgxWIh5M2LbBXgBcLKLG0lFpeTq2spB4_epIEm1s2BeqJClkjodzG0zVgYV7DHCTkbVN2G8GHC7BWLicfVuRHFXlMXcwJLc7MN7cWcM2ZuumhnUXqSifemTGuMbBLEDA5qxHlY1MtnU2vrloZIN-fDI6-hV978qapASutkOwYGdZ9jfT_XQf-3QjXnLmEOSUGp1-Cs578fNr_2wp_vA7uj3VR4ll-Y9INcgSpIYGBOQkxl8nHZYJ3zf6fm6hXfuLVrcv2W03SgKkAQyHh3c_geyPqr3HDTEdjPiSMceUftj8Nrnz5u9PvXoW9Vth-M_x4In-1QTxGdDg6x-CgE9R9jYPoeOdNHbXlfkc3lQjOG9K_SMba0v90gniqYf18cHmr8WD_WB5cLgwyNpCtQ3l_Nk3g4vi8YQqWMC8h4qqV2B2fJRQvcAnbMKNeXbyNqp6w1bbsKWq17KrKdZcIxmFmG3kVnIKoKpi1Qx2YEbyKp6TJUs1Y6uo9Z2z6vfcf7sZ1Sw
