@@ -18,8 +18,8 @@ css: unocss
 
 ---
 transition: slide-left
-layout: image-left
-image: https://images.unsplash.com/photo-1617982324703-442ecdc0fbab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
+layout: image-right
+image: https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 # 视频网站现状
 
@@ -33,6 +33,8 @@ image: https://images.unsplash.com/photo-1617982324703-442ecdc0fbab?ixlib=rb-4.0
 
 ---
 transition: slide-left
+layout: image-right
+image: https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 # 计算机软件保护条例
 
@@ -40,8 +42,6 @@ transition: slide-left
 
 ---
 transition: slide-left
-layout: image-right
-image: https://images.unsplash.com/photo-1530819568329-97653eafbbfa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NTg3MDI5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 # 技术栈
 
@@ -68,6 +68,8 @@ background: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=r
 
 ---
 transition: slide-left
+layout: image-right
+image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 寻找资源
 [示例网站](https://www.dm530p.net/list/?region=%E4%B8%AD%E5%9B%BD)
@@ -311,7 +313,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: cover
-background: https://images.unsplash.com/photo-1619075120156-f5729c752edf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NTg3NTI4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
+background: https://images.unsplash.com/photo-1637580980556-085dee659c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NTg3NTI4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 # 视频播放
 
@@ -396,30 +398,51 @@ transition: slide-left
 ---
 # DLNA
 > - DLNA是数字生活联盟（Digital Living Network Alliance）的缩写，是一个非营利性组织，致力于推广数字娱乐设备之间的互联互通。
-
-<div class="flex items-center">
-<div class="flex-1">
-  <img src="/dlna.png" width="600" >
-</div>
-<ul class="flex-1">
-  <li>服务器：多媒体文件的存储设备</li>
-  <li>客户端：从服务器中获取媒体文件并播放</li>
-  <li>控制点：控制DLNA渲染器的设备，比如播放/暂停</li>
-  <li>渲染器：播放媒体文件</li>
-</ul>
-</div>
-
+> - DLNA 是基于 UPnP 协议的，UPnP 协议使用 SSDP 协议进行服务发现。
 
 ---
 transition: slide-left
 ---
-# DLNA VS AirPlay
+# DLNA vs AirPlay
 | 特征 | DLNA协议                           | AirPlay |
 | --- |----------------------------------| --- |
 | 设备兼容性 | 跨平台，支持 Android/IOS/Windows 等各种设备 | 仅限于苹果设备之间的连接和交互 |
 | 支持的媒体格式和协议 | 支持多种不同的媒体格式和流媒体协议                | 仅支持特定的媒体格式和协议，如H.264和AAC等 |
 | 控制选项 | 提供更多的控制选项，如播放控制、音量控制、暂停和跳过等功能    | 提供更简单、更直接的传输体验，但控制选项更少 |
 | 连接方式 | 可以通过有线或无线网络连接设备                  | 仅能通过无线网络连接设备 |
+
+---
+transition: slide-left
+---
+# 设备发现
+<div class="flex justify-center">
+  <img src="/ssdp_devices.png" width="200">
+</div>
+
+---
+transition: slide-left
+---
+# SSDP
+> 简单服务发现（Simple Service Discovery Protocol，SSDP）是一种基于 UDP 的协议，它允许设备在同一网络上发现彼此的存在，从而实现设备间的通信和协作。SSDP 是 UPnP（Universal Plug and Play）协议的子集。
+
+<img src="/ssdp.png" width="480">
+
+
+---
+transition: slide-left
+---
+# DLNA 原理
+<div class="flex items-center">
+<div class="flex-1">
+  <img src="/dlna.png" >
+</div>
+<ul class="flex-1">
+  <li>服务器：发布资源</li>
+  <li>客户端：从服务器中获取媒体文件并播放</li>
+  <li>控制点：控制播放过程，比如播放、暂停等</li>
+  <li>渲染器：播放资源</li>
+</ul>
+</div>
 
 ---
 transition: slide-left
