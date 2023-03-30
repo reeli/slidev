@@ -461,7 +461,7 @@ transition: slide-left
 ---
 transition: slide-left
 ---
-# 链接失效
+# 单次消费的播放链接
 <div class="flex center">
   <img src="/cache_pool.svg" width="700">
 </div>
@@ -472,4 +472,14 @@ transition: slide-left
 ---
 # 总结
 
+<v-clicks>
+ <ul>
+  <li>静态资源的抓取：GraphQL -> AST -> Crawler Config -> Resource </li>
+  <li>视频播放：HLS 协议 = HTTP + M3U8 + TS </li>
+  <li>视频嗅探：通过 WebView 捕获视频资源地址(x.m3u8/x.mp4) </li>
+  <li>SSDP 简单服务发现协议：可以让设备在同一网络上发现彼此的存在</li>
+  <li>DLNA 投屏协议：通过这种跨平台的标准化协议，将手机上获取到的视频地址传输到电视上播放 </li>
+  <li>链接只能单次消费的解决方案：引入缓存池，将获取到的 m3u8/mp4 文件保存下来，然后将手机作为服务器，向电视提供播放地址 </li>
+ </ul>
+</v-clicks>
 
