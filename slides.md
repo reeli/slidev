@@ -394,6 +394,36 @@ transition: slide-left
 ---
 transition: slide-left
 ---
+# DLNA
+> - DLNA是数字生活联盟（Digital Living Network Alliance）的缩写，是一个非营利性组织，致力于推广数字娱乐设备之间的互联互通。
+
+<div class="flex items-center">
+<div class="flex-1">
+  <img src="/dlna.png" width="600" >
+</div>
+<ul class="flex-1">
+  <li>服务器：多媒体文件的存储设备</li>
+  <li>客户端：从服务器中获取媒体文件并播放</li>
+  <li>控制点：控制DLNA渲染器的设备，比如播放/暂停</li>
+  <li>渲染器：播放媒体文件</li>
+</ul>
+</div>
+
+
+---
+transition: slide-left
+---
+# DLNA VS AirPlay
+| 特征 | DLNA协议                           | AirPlay |
+| --- |----------------------------------| --- |
+| 设备兼容性 | 跨平台，支持 Android/IOS/Windows 等各种设备 | 仅限于苹果设备之间的连接和交互 |
+| 支持的媒体格式和协议 | 支持多种不同的媒体格式和流媒体协议                | 仅支持特定的媒体格式和协议，如H.264和AAC等 |
+| 控制选项 | 提供更多的控制选项，如播放控制、音量控制、暂停和跳过等功能    | 提供更简单、更直接的传输体验，但控制选项更少 |
+| 连接方式 | 可以通过有线或无线网络连接设备                  | 仅能通过无线网络连接设备 |
+
+---
+transition: slide-left
+---
 # 展望
 
 - 目前内置数据源，未来考虑只提供工具。工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）
