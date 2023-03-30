@@ -323,31 +323,72 @@ transition: slide-left
 HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流媒体传输协议，用于音频和视频的实时传输。
 
 <div class="flex items-center gap-16">
+  <div class="flex-1">
+    <v-clicks :every='1'>
+      <div>
+        原理：将媒体文件拆分成一系列小的片段，并使用 HTTP 协议来传输这些片段。这些媒体段可以被独立地请求和下载。
+      </div>
+      <div class="mt-4">
+          组成：
+          <div>- HTTP: 传输协议</div>
+          <div>- M3U8: 索引文件</div>
+          <div>- TS(Transport Stream): 音视频的媒体信息</div>
+      </div>
+      <div class="mt-4">
+        应用场景：
+        <div>- 直播/在线教育</div>
+        <div>- 各大视频平台</div>
+      </div>
+    </v-clicks>
+  </div>
   <v-clicks :every='1'>
-    <div class="flex-1">
+  <div class="flex-1">
       <img src="/hls.png" width="460">
     </div>
-  <div class="flex-1">
-
-  原理：将媒体文件拆分成一系列小的片段，并使用 HTTP 协议来传输这些片段。这些媒体段可以被独立地请求和下载。
-
-  组成：
-  - HTTP: 传输协议
-  - M3U8: 索引文件
-  - TS: 音视频的媒体信息
-
-  应用场景：
-  - 视频直播/在线教育/视频平台
-  </div>
   </v-clicks>
 </div>
 
 ---
 transition: slide-left
 ---
-# 播放链接抓取
-<div class="center middle">
-  <img src="/web_view.png" width="822">
+# 视频嗅探
+播放地址不是静态的，并不存在于 HTML 中。如何抓取播放链接？
+
+<v-clicks :every='1'>
+  <div class="center middle">
+    <img src="/web_view.png" width="822">
+  </div>
+  <div class="mt8 text-gray-500">
+    将 WebView 的透明度设为 0 或者使用 headless 模式
+  </div>
+</v-clicks>
+
+---
+transition: slide-left
+---
+# 投屏
+> - 投屏技术是一种将移动设备或电脑屏幕内容「无线传输」到大屏幕设备上显示的技术。
+> - 通过Wi-Fi或蓝牙连接将源设备和大屏幕设备连接在一起，并使用特定的投屏协议将屏幕内容从源设备传输到大屏幕设备。
+
+<div class="flex mt-20 space-around">
+<div class="flex-1 mr-4">
+  <div>
+    <img src="/mirror_recreation.jpeg" width="300" >
+  </div>
+  <p class="text-center">家庭娱乐</p>
+</div>
+<div class="flex-1 mr-4">
+  <div>
+    <img src="/mirror_meeting.jpeg" width="300" >
+  </div>
+  <p class="text-center">商务会议</p>
+</div>
+<div class="flex-1 mr-4">
+  <div>
+    <img src="/mirror_teaching.jpeg" width="300" >
+  </div>
+  <p class="text-center">教育培训</p>
+</div>
 </div>
 
 ---
