@@ -332,6 +332,7 @@ transition: slide-left
 # Why GraphQL
 - 相较 JSON 而言，表达更简洁，方便后期维护配置
 - 拥有类型系统，避免配置出错
+- 可扩展性，可以使用自定义指令扩展查询语言
 - 被多种语言支持，如 Dart/JavaScript/Kotlin，能够快速迁移到其他地方
 
 ---
@@ -373,6 +374,17 @@ HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流�
     </div>
   </v-clicks>
 </div>
+
+---
+transition: slide-left
+layout: image-right
+image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+---
+# 为什么选择 HLS？
+
+1. 适应不同网络状况：可以根据当前网络情况自动调整码率和分辨率
+2. 支持多平台：包括手机/电脑/电视等，可以在不同的平台上提供一致的视频体验。
+3. 可以实现直播和点播：为视频网站提供了更多应用场景。
 
 ---
 transition: slide-left
