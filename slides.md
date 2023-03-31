@@ -104,8 +104,24 @@ curl https://www.dm530p.net/list/\?region\=%E4%B8%AD%E5%9B%BD --output demo.html
 ---
 transition: slide-left
 ---
-# Crawler 配置
+# GraphQL
+> - GraphQL 是一种用于构建 API 的查询语言和运行时。「请求你所要的数据，不多不少」
 
+
+<div class="flex mt20" style="height: 150px">
+<v-clicks>
+  <img src="/graph_ql_1.png" class="mr4">
+  <img src="/graph_ql_2.png" class="mr4">
+  <img src="/graph_ql_3.png">
+</v-clicks>
+</div>
+
+
+
+---
+transition: slide-left
+---
+# Crawler 配置
 <div flex gap-2 m="-t-2" h-110>
 
   ```graphql
@@ -143,7 +159,8 @@ transition: slide-left
     fromDocument: Boolean
   ) repeatable on FIELD
   ```
-  
+
+
   ```graphql
 # 配置（Ask for what you need）
   query {
@@ -171,6 +188,7 @@ transition: slide-left
     }
   }
   ```
+
 </div>
 
 ---

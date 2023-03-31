@@ -223,3 +223,6 @@ shape: text
 DLNA(Digital Living Network Alliance) -> UPnP(Universal Plug and Play)
 UPnP(Universal Plug and Play) -> SSDP(Simple Service Discovery Protocol)
 SSDP(Simple Service Discovery Protocol) -> UDP(User Datagram Protocol)
+
+
+GraphQL 并没有和任何特定数据库或者存储引擎绑定，而是依靠你现有的代码和数据支撑
