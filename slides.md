@@ -75,13 +75,17 @@ transition: slide-left
 
 ---
 transition: slide-left
+layout: two-cols
 ---
 # 计算机软件保护条例
 
 > 第十七条　为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。
 
+::right::
+
 <v-clicks>
-  <ul class="mt20 text-grey-500">
+  <ul class="ml10 mt12">
+    <li>个人行为与公司无关</li>
     <li>不再内置数据源，未来考虑只提供工具，由用户侧进行数据源配置</li>
     <li>工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）</li>
   </ul>
