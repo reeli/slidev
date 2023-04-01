@@ -105,16 +105,14 @@ image: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0
 ---
 transition: slide-left
 layout: cover
-background: https://images.unsplash.com/photo-1608634769432-f9b6524aa2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
-
-
+background: https://images.unsplash.com/photo-1550055280-766ba3e748b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80
 ---
 # 静态资源抓取
 
 ---
 transition: slide-left
 layout: image-right
-image: https://images.unsplash.com/photo-1608634769432-f9b6524aa2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+image: https://images.unsplash.com/photo-1550055280-766ba3e748b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80
 ---
 # 寻找资源
 [示例网站](https://www.dm530p.net/list/?region=%E4%B8%AD%E5%9B%BD)
@@ -424,7 +422,7 @@ HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流�
 ---
 transition: slide-left
 layout: image-right
-image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+image: https://images.unsplash.com/photo-1637580980556-085dee659c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NTg3NTI4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 # 为什么选择 HLS？
 
@@ -446,6 +444,13 @@ transition: slide-left
     将 WebView 的透明度设为 0 或者使用 headless 模式
   </div>
 </v-clicks>
+
+---
+transition: slide-left
+layout: cover
+background: https://images.unsplash.com/photo-1565630916779-e303be97b6f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
+---
+# 投屏
 
 ---
 transition: slide-left
@@ -478,7 +483,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: image-right
-image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+image: https://images.unsplash.com/photo-1565630916779-e303be97b6f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
 ---
 # DLNA
 > - DLNA是数字生活联盟（Digital Living Network Alliance）的缩写，是一个非营利性组织，致力于推广数字娱乐设备之间的互联互通。
