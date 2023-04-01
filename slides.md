@@ -21,6 +21,30 @@ transition: slide-left
 layout: image-right
 image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
+# Agenda
+
+| 章节  | 内容     | 
+|-----|--------|
+| 1   | App 介绍 |
+| 2   | 静态资源抓取 | 
+| 3   | 视频播放   |
+| 4   | 投屏     |
+| 5   | 总结     |
+
+
+---
+transition: slide-left
+layout: cover
+background: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+---
+# App 介绍
+
+
+---
+transition: slide-left
+layout: image-right
+image: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+---
 # 视频网站现状
 
 - 超前点播/点映礼
@@ -47,10 +71,10 @@ transition: slide-left
     <img src="/app_detail.jpeg" width="200">
   </div>
 </div>
+
+
 ---
 transition: slide-left
-layout: image-left
-image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 计算机软件保护条例
 
@@ -62,10 +86,12 @@ image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0
     <li>工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）</li>
   </ul>
 </v-clicks>
+
+
 ---
 transition: slide-left
-layout: image-left
-image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+layout: image-right
+image: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 技术栈
 
@@ -74,26 +100,17 @@ image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0
 
 ---
 transition: slide-left
----
-# Overview
-
-| 章节      | 功能        | 技术实现    |
-|---------|-----------|---------|
-| 1       | 列表页/详情页展示 | 静态资源抓取  |
-| 2 | 视频播放      | 视频嗅探    |
-| 3 | 投屏        | DLNA 投屏 |
-
----
-transition: slide-left
 layout: cover
-background: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+background: https://images.unsplash.com/photo-1608634769432-f9b6524aa2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+
+
 ---
 # 静态资源抓取
 
 ---
 transition: slide-left
 layout: image-right
-image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+image: https://images.unsplash.com/photo-1608634769432-f9b6524aa2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 寻找资源
 [示例网站](https://www.dm530p.net/list/?region=%E4%B8%AD%E5%9B%BD)
