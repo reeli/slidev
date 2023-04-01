@@ -226,3 +226,20 @@ SSDP(Simple Service Discovery Protocol) -> UDP(User Datagram Protocol)
 
 
 GraphQL 并没有和任何特定数据库或者存储引擎绑定，而是依靠你现有的代码和数据支撑
+
+
+Serverside Render:
+
+direction: right
+
+C: Client {
+HMTL 页面
+}
+S: Server {
+组装 HTML
+}
+B: BFF {Data}
+C -> S: 发起请求
+S -> B: 获取数据
+B -> S: 返回数据
+S -> C: 返回 HTML

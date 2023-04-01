@@ -104,6 +104,13 @@ curl https://www.dm530p.net/list/\?region\=%E4%B8%AD%E5%9B%BD --output demo.html
 ---
 transition: slide-left
 ---
+# 服务端渲染
+
+<img src="/ssr.svg">
+
+---
+transition: slide-left
+---
 # GraphQL
 > - GraphQL 是一种用于构建 API 的查询语言和运行时。「请求你所要的数据，不多不少」
 
