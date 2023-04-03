@@ -531,9 +531,9 @@ transition: slide-left
 ---
 transition: slide-left
 ---
-# 单次消费的播放链接
+# 单次消费
 <div class="flex center">
-  <img src="/cache_pool.svg" width="700">
+  <img src="/cache_pool.svg" width="500">
 </div>
 
 

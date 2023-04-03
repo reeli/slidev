@@ -243,3 +243,28 @@ C -> S: 发起请求
 S -> B: 获取数据
 B -> S: 返回数据
 S -> C: 返回 HTML
+
+
+pipeline 流水线，通过组合方法来实现复杂功能
+
+在计算机科学中，抽象语法树（Abstract Syntax Tree，AST），或简称语法树（Syntax tree），是源代码语法结构的一种抽象表示。 它以树状的形式表现编程语言的语法结构，树上的每个节点都表示源代码中的一种结构。 之所以说语法是“抽象”的，是因为这里的语法并不会表示出真实语法中出现的每个细节。
+
+
+Video Provider: {
+A
+B
+}
+
+Cache Pool: {
+FileA: m3u8 content A
+FileB: m3u8 content B
+}
+
+Cache Pool <- Mobile Server
+Cache Pool <- Mobile Player
+
+Mobile Server -> DLNA Player
+
+Client -> Video Provider: request url
+Video Provider -> Client: m3u8 content
+Client -> Cache Pool: store data
