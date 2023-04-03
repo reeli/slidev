@@ -268,3 +268,11 @@ Mobile Server -> DLNA Player
 Client -> Video Provider: request url
 Video Provider -> Client: m3u8 content
 Client -> Cache Pool: store data
+
+
+- web 安全问题，透明的，只要你经过浏览器，数据都能被截获
+- 授权机制：m3u8 授权相当于授权了一组 ts, ts 可以放到 CDN，没有 m3u8 播放列表，不知道播放顺序，ts 拿去也没什么用
+- 爬虫引擎 -> 列表/详情页的抓取
+- 资源嗅探 -> 如何获取到动态的播放地址
+- 投屏协议 -> 将手机的内容投到电视屏幕上
+- 本地缓存 -> 用户数据 Cache -> 文件目录(document 不会被手机管家删除，temp 临时文件清除缓存是会被删除)

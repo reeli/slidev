@@ -16,28 +16,18 @@ css: unocss
 ---
 # 打造一个追剧 App
 
----
-transition: slide-left
-layout: image-right
-image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
----
-# Agenda
 
-| 章节  | 内容     | 
-|-----|--------|
-| 1   | App 介绍 |
-| 2   | 静态资源抓取 | 
-| 3   | 视频播放   |
-| 4   | 投屏     |
-| 5   | 总结     |
+[//]: # (---)
 
+[//]: # (transition: slide-left)
 
----
-transition: slide-left
-layout: cover
-background: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
----
-# App 介绍
+[//]: # (layout: cover)
+
+[//]: # (background: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920)
+
+[//]: # (---)
+
+[//]: # (# App 介绍)
 
 
 ---
@@ -104,15 +94,28 @@ image: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0
 
 ---
 transition: slide-left
+layout: image-right
+image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
+---
+# Overview
+
+| 章节  | 内容     | 
+|-----|--------|
+| 1   | 静态资源抓取 | 
+| 2   | 视频播放   |
+| 3   | 投屏     |
+
+---
+transition: slide-left
 layout: cover
-background: https://images.unsplash.com/photo-1550055280-766ba3e748b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80
+background: https://images.unsplash.com/photo-1650965082260-bcda7448309e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
 ---
 # 静态资源抓取
 
 ---
 transition: slide-left
 layout: image-right
-image: https://images.unsplash.com/photo-1550055280-766ba3e748b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80
+image: https://images.unsplash.com/photo-1650965082260-bcda7448309e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
 ---
 # 寻找资源
 [示例网站](https://www.dm530p.net/list/?region=%E4%B8%AD%E5%9B%BD)
@@ -448,7 +451,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: cover
-background: https://images.unsplash.com/photo-1565630916779-e303be97b6f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
+background: https://images.unsplash.com/photo-1650968163166-da7e87ab4e8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
 ---
 # 投屏
 
@@ -483,7 +486,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: image-right
-image: https://images.unsplash.com/photo-1565630916779-e303be97b6f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
+image: https://images.unsplash.com/photo-1650968163166-da7e87ab4e8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
 ---
 # DLNA
 > - DLNA是数字生活联盟（Digital Living Network Alliance）的缩写，是一个非营利性组织，致力于推广数字娱乐设备之间的互联互通。
