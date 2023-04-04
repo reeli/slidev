@@ -105,11 +105,12 @@ image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0
 ---
 # Overview
 
-| 章节  | 内容     | 
-|-----|--------|
-| 1   | 静态资源抓取 | 
-| 2   | 视频播放   |
-| 3   | 投屏     |
+| 章节 | 内容      | 
+|----|---------|
+| 1  | 静态资源抓取  | 
+| 2  | 视频播放    |
+| 3  | 投屏      |
+| 4  | 用户数据的存储 |
 
 ---
 transition: slide-left
@@ -120,8 +121,6 @@ background: https://images.unsplash.com/photo-1650965082260-bcda7448309e?ixlib=r
 
 ---
 transition: slide-left
-layout: image-right
-image: https://images.unsplash.com/photo-1650965082260-bcda7448309e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
 ---
 # 寻找资源
 [示例网站](https://www.dm530p.net/list/?region=%E4%B8%AD%E5%9B%BD)
@@ -129,28 +128,30 @@ image: https://images.unsplash.com/photo-1650965082260-bcda7448309e?ixlib=rb-4.0
 curl https://www.dm530p.net/list/\?region\=%E4%B8%AD%E5%9B%BD --output demo.html
 ```
 
----
-transition: slide-left
----
-# 服务端渲染
-
-<img src="/ssr.svg">
-
----
-transition: slide-left
----
-# GraphQL
-> - GraphQL 是一种用于构建 API 的查询语言和运行时。「请求你所要的数据，不多不少」
-
-
-<div class="flex mt20" style="height: 150px">
 <v-clicks>
-  <img src="/graph_ql_1.png" class="mr4">
-  <img src="/graph_ql_2.png" class="mr4">
-  <img src="/graph_ql_3.png">
+<img src="/ssr.svg">
+    <li>对 SEO 有的强烈的需求，一般会采用 SSR</li>
+    <li>数据并非通过 JS 请求 API 所获得，而是被隐藏在 HTML</li>
 </v-clicks>
-</div>
 
+---
+transition: slide-left
+---
+# 抓取数据
+将数据从 HTML 中提取出来，恢复成「API」
+
+```dart {0|all}
+getVideo(String page, String cateId, String orderBy)
+```
+
+
+<v-clicks>
+    <ul class="mt10">
+        <li>Step1: 定义配置</li>
+        <li>Step2: 找到 HTML</li>
+        <li>Step3: 操作 DOM 获得数据</li>
+    </ul>
+</v-clicks>
 
 
 ---
@@ -228,39 +229,86 @@ transition: slide-left
 
 ---
 transition: slide-left
+---
+# GraphQL
+GraphQL 是一种用于构建 API 的查询语言和运行时。「请求你所要的数据，不多不少」
+
+
+<div class="flex mt20" style="height: 150px">
+<v-clicks>
+  <img src="/graph_ql_1.png" class="mr4">
+  <img src="/graph_ql_2.png" class="mr4">
+  <img src="/graph_ql_3.png">
+</v-clicks>
+</div>
+
+
+
+---
+transition: slide-left
 layout: two-cols
 ---
 # 指令集
-- _dom_query
-- _dom_query_all
-- _dom_siblings
-- _dom_attr
-- _string_replace
-- _string_extract
-- _string_switch
-- _def
+- @_dom_query
+- @_dom_query_all
+- @_dom_attr
+- @_string_replace
+- @_def
+- ...
+
+<v-clicks>
+```graphql
+{
+  videos @_dom_query(selector: ".myui-vodlist") {
+    title @_dom_attr(name: "title")
+    imageUrl @_dom_attr(name: "data-original")
+    detailUrl @_dom_attr(name: "href")
+  }
+}
+```
+</v-clicks>
 
 ::right::
 # Directives
 
 - 标记如何获取该数据
+- 每个指令对应一个函数
 - 通过组合 directives，应对复杂业务场景
-- 通过扩展 Directives，应对需求变化
-
----
-transition: slide-left
----
-# 配置解析
-GraphQL AST -> Crawler Config 
-
-<img src="/ast.png">
+- 通过扩展 directives，应对需求变化
 
 ---
 transition: slide-left
 ---
 # 配置解析
 
-Crawler Config
+<div flex gap-2 m="-t-2" h-110>
+
+```graphql {all} {maxHeight:'420px'}
+query {
+  init(
+    siteName: "爱看影视"
+    siteUrl: "https://ikan6.vip"
+    listOptions: {
+      sortBy: "sortBy"
+      pageBy: "catePg"
+      groups: [
+        { name: "国产剧", values: [{ value: "2", key: "cateId" }] }
+        { name: "动漫", values: [{ value: "4", key: "cateId" }] }
+      ]
+    }
+  ) {
+    getVideos(
+      path: "/vodshow/{cateId:2}--{sortBy:time}-----{catePg}---/"
+    ) {
+      videos @_dom_query(selector: ".myui-vodlist") {
+        title @_dom_attr(name: "title")
+        imageUrl @_dom_attr(name: "data-original")
+        detailUrl @_dom_attr(name: "href")
+      }
+    }
+  }
+}
+```
 
 ```json {all} {maxHeight:'420px'}
 {
@@ -373,11 +421,17 @@ Crawler Config
 }
 ```
 
+</div>
+
+
 ---
 transition: slide-left
 ---
-# 静态资源抓取流程
-<img src="/data_crawl.png">
+# 如何解析
+GraphQL AST -> Crawler Schema 
+
+<img src="/ast.png">
+
 
 ---
 transition: slide-left
@@ -387,6 +441,15 @@ transition: slide-left
 - 拥有类型系统，避免配置出错
 - 可扩展性，可以使用自定义指令扩展查询语言
 - 被多种语言支持，如 Dart/JavaScript/Kotlin，能够快速迁移到其他地方
+
+
+---
+transition: slide-left
+---
+# 静态资源抓取流程
+<img src="/data_crawl.png">
+
+
 
 ---
 transition: slide-left

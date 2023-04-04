@@ -278,3 +278,8 @@ Client -> Cache Pool: store data
 - 资源嗅探 -> 如何获取到动态的播放地址
 - 投屏协议 -> 将手机的内容投到电视屏幕上
 - 本地缓存 -> 用户数据 Cache -> 文件目录(document 不会被手机管家删除，temp 临时文件清除缓存是会被删除)
+
+
+User Generated Content(用户原创内容）
+
+directive 可以用来做复杂的输入限制，比如查询所有年龄大于 18 岁的数据
