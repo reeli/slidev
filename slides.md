@@ -43,7 +43,14 @@ image: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0
 - 限制多设备登录
 - 普通会员涨价
 - 手机端会员和电视端会员不能通用
-- 普通 VIP 用户无法投屏/投屏清晰度太低
+- 普通 VIP 无法投屏/限制投屏清晰度
+
+---
+transition: slide-left
+layout: center
+---
+<img src="/bullets_fly.png" width="500"/>
+
 
 ---
 transition: slide-left
@@ -55,10 +62,10 @@ transition: slide-left
     <img src="/app_home.jpeg"  width="200">
   </div>
   <div class="flex-1">
-    <img src="/app_favorite.jpeg" width="200">
+    <img src="/app_detail.jpeg" width="200">
   </div>
   <div class="flex-1">
-    <img src="/app_detail.jpeg" width="200">
+    <img src="/app_favorite.jpeg" width="200">
   </div>
 </div>
 
@@ -75,16 +82,15 @@ layout: two-cols
 
 <v-clicks>
   <ul class="ml10 mt12">
-    <li>个人行为与公司无关</li>
-    <li>不再内置数据源，未来考虑只提供工具，由用户侧进行数据源配置</li>
     <li>工具是合法的，是否合法取决于你使用什么数据源（韩剧 TV/人人视频）</li>
+    <li>不再内置数据源，未来考虑只提供工具，由用户侧进行数据源配置</li>
   </ul>
 </v-clicks>
 
 
 ---
 transition: slide-left
-layout: image-right
+layout: image-left
 image: https://images.unsplash.com/photo-1619560820102-31f5b04c049a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80&w=1920
 ---
 # 技术栈
