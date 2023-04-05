@@ -110,7 +110,6 @@ image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0
 | 1  | 静态资源抓取  | 
 | 2  | 视频播放    |
 | 3  | 投屏      |
-| 4  | 用户数据的存储 |
 
 ---
 transition: slide-left
@@ -566,27 +565,6 @@ transition: slide-left
 | 控制选项 | 提供更多的控制选项，如播放控制、音量控制、暂停和跳过等功能    | 提供更简单、更直接的传输体验，但控制选项更少 |
 | 连接方式 | 可以通过有线或无线网络连接设备                  | 仅能通过无线网络连接设备 |
 
----
-transition: slide-left
----
-# 设备发现
-<div class="flex justify-center">
-  <img src="/ssdp_devices.png" width="200">
-</div>
-
----
-transition: slide-left
----
-# SSDP
-> 简单服务发现（Simple Service Discovery Protocol，SSDP）是一种基于 UDP 的协议，它允许设备在同一网络上发现彼此的存在，从而实现设备间的通信和协作。SSDP 是 UPnP（Universal Plug and Play）协议的子集。
-
-<img src="/ssdp.svg" width="480">
-
----
-transition: slide-left
----
-# 各协议之间的关系
-<img src="/dlna_base.svg" width="300">
 
 ---
 transition: slide-left
@@ -595,14 +573,44 @@ transition: slide-left
 
 <img src="/dlna.svg" width="650">
 
+
+
 ---
 transition: slide-left
+layout: two-cols
 ---
-# 单次消费
-<div class="flex center">
-  <img src="/cache_pool.svg" width="500">
+
+# 设备发现
+<div class="flex justify-center">
+  <img src="/ssdp_devices.png" width="200">
 </div>
 
+::right::
+# SSDP
+简单服务发现（Simple Service Discovery Protocol，SSDP）允许设备在同一网络上发现彼此的存在，从而实现设备间的通信和协作。
+
+<img src="/ssdp.svg" width="480">
+
+---
+transition: slide-left
+layout: two-cols
+---
+# 总有些坑
+<div class="flex center">
+  <img src="/cache_pool.svg" width="300">
+</div>
+
+::right::
+
+<v-clicks>
+<li>只需对 m3u8 做鉴权即可</li>
+<li>文件系统: 
+    <ul class="ml8">
+        <li>temp 文件夹：用于存放临时文件。这个文件夹里面的文件会被手机管家清理掉。</li>
+        <li>doc 文件夹：用于存储应用程序文档和资源的文件夹。比如图片、音频、视频等。</li>
+    </ul>
+</li>
+</v-clicks>
 
 ---
 transition: slide-left

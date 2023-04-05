@@ -1,0 +1,16 @@
+Video Provider: {
+  A
+  B
+}
+
+Cache Pool: {
+  FileA: m3u8 content A
+  FileB: m3u8 content B
+}
+
+Video Provider -> Client: fetch m3u8 content
+Client -> Cache Pool: store data
+
+Cache Pool -> Mobile Player: load
+Cache Pool -> Mobile Server: load
+Mobile Server -> DLNA Player: fetch
