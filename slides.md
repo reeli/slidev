@@ -571,7 +571,9 @@ transition: slide-left
 ---
 # DLNA 原理
 
-<img src="/dlna.svg" width="650">
+<div class="flex justify-center">
+<img src="/dlna.svg" width="600">
+</div>
 
 
 ---
@@ -602,7 +604,7 @@ layout: two-cols
 ::right::
 
 <v-clicks>
-<li>只需对 m3u8 做鉴权即可</li>
+<li class="mt20">只需对 m3u8 做鉴权即可</li>
 <li>文件系统: 
     <ul class="ml8">
         <li>temp 文件夹：用于存放临时文件。这个文件夹里面的文件会被手机管家清理掉。</li>
