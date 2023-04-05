@@ -115,7 +115,7 @@ image: https://images.unsplash.com/photo-1538131052268-1af52c1db73d?ixlib=rb-4.0
 ---
 transition: slide-left
 layout: cover
-background: https://images.unsplash.com/photo-1650965082260-bcda7448309e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
+background: https://images.unsplash.com/photo-1588153191435-c890d9adbb99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
 ---
 # 静态资源抓取
 
@@ -458,7 +458,7 @@ transition: slide-left
 ---
 transition: slide-left
 layout: cover
-background: https://images.unsplash.com/photo-1637580980556-085dee659c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc5NTg3NTI4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
+background: https://images.unsplash.com/photo-1619075120156-f5729c752edf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80
 ---
 # 视频播放
 
@@ -532,8 +532,7 @@ background: https://images.unsplash.com/photo-1650968163166-da7e87ab4e8c?ixlib=r
 transition: slide-left
 ---
 # 投屏
-> - 投屏技术是一种将移动设备或电脑屏幕内容「无线传输」到大屏幕设备上显示的技术。
-> - 通过Wi-Fi或蓝牙连接将源设备和大屏幕设备连接在一起，并使用特定的投屏协议将屏幕内容从源设备传输到大屏幕设备。
+投屏技术是一种将移动设备或电脑屏幕内容「无线传输」到大屏幕设备上显示的技术
 
 <div class="flex mt-20 space-around">
 <div class="flex-1 mr-4">
@@ -555,14 +554,6 @@ transition: slide-left
   <p class="text-center">教育培训</p>
 </div>
 </div>
-
----
-transition: slide-left
-layout: image-right
-image: https://images.unsplash.com/photo-1650968163166-da7e87ab4e8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
----
-# DLNA
-> - DLNA是数字生活联盟（Digital Living Network Alliance）的缩写，是一个非营利性组织，致力于推广数字娱乐设备之间的互联互通。
 
 ---
 transition: slide-left
