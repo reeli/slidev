@@ -1,0 +1,38 @@
+
+sequenceDiagram
+participant C as Control Device (Mobile)
+box rgba(33,66,99,0.1) TV
+    participant S as 奇异果 App(DLNA Server/Player)
+    participant R as Rendering Device (TV)
+end
+participant MP as Media Provider
+
+    C->>S: 发现设备
+    S-->>C: 发送设备信息
+
+
+    C->>S: 发送播放地址(URL)
+
+    activate S
+
+    C->>S: 发送播放指令
+
+    S->>MP: 请求媒体资源
+    MP-->>S: 返回媒体资源
+
+    S-->>R: 解码并传输视频帧
+
+    activate R
+
+    S-->>C:  返回播放状态
+
+
+    C->>S: 发送控制指令(暂停)
+    S->>R: 暂停解码
+
+    deactivate R
+
+    S-->>C: 返回暂停结果
+
+    deactivate S
+

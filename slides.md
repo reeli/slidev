@@ -574,7 +574,6 @@ transition: slide-left
 <img src="/dlna.svg" width="650">
 
 
-
 ---
 transition: slide-left
 layout: two-cols
