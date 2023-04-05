@@ -594,17 +594,14 @@ layout: two-cols
 
 ---
 transition: slide-left
-layout: two-cols
 ---
 # 总有些坑
 <div class="flex center">
-  <img src="/cache_pool.svg" width="300">
+  <img src="/cache_pool.svg">
 </div>
 
-::right::
-
 <v-clicks>
-<li class="mt20">只需对 m3u8 做鉴权即可</li>
+<li class="mt10">只需对 m3u8 做鉴权即可</li>
 <li>文件系统: 
     <ul class="ml8">
         <li>temp 文件夹：用于存放临时文件。这个文件夹里面的文件会被手机管家清理掉。</li>
