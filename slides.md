@@ -129,8 +129,8 @@ curl https://www.dm530p.net/list/\?region\=%E4%B8%AD%E5%9B%BD --output demo.html
 
 <v-clicks>
 <img src="/ssr.svg">
-    <li>对 SEO 有的强烈的需求，一般会采用 SSR</li>
     <li>数据并非通过 JS 请求 API 所获得，而是被隐藏在 HTML</li>
+    <li>对 SEO 有的强烈的需求，一般会采用 SSR</li>
 </v-clicks>
 
 ---
