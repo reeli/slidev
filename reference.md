@@ -93,8 +93,11 @@ Client: {
 广播 Client 设备信息、IP地址、端口号\n通知其他设备自己的存在
 }
 
-Client -> Device1: 发送 SSDP 搜索请求
-Client -> Device2: 发送 SSDP 搜索请求
+Router: {
+}
+
+Router -> Device1: 发送 SSDP 搜索请求
+Router -> Device2: 发送 SSDP 搜索请求
 
 Device1: {
 向客户端返回设备信息、IP地址、端口号

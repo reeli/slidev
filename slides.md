@@ -140,7 +140,7 @@ transition: slide-left
 将数据从 HTML 中提取出来，恢复成「API」
 
 ```dart {0|all}
-getVideo(String page, String cateId, String orderBy)
+List<Video> getVideos(String page, String cateId, String orderBy)
 ```
 
 
@@ -464,11 +464,31 @@ background: https://images.unsplash.com/photo-1619075120156-f5729c752edf?ixlib=r
 ---
 transition: slide-left
 ---
-# HLS 流媒体协议 
+# 视频嗅探
+播放地址不是静态的，并不存在于 HTML 中。如何抓取播放链接？
+
+<v-clicks :every='1'>
+  <div class="center middle">
+    <img src="/web_view.png" width="822">
+  </div>
+  <div class="mt8 text-gray-500">
+    将 WebView 的透明度设为 0 或者使用 headless 模式
+  </div>
+</v-clicks>
+
+---
+transition: slide-left
+---
+# M3U8 (HLS 索引文件) 
 
 HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流媒体传输协议，用于音频和视频的实时传输。
 
 <div class="flex items-center gap-16">
+<v-clicks :every='1'>
+  <div class="flex-1">
+      <img src="/hls.png" width="460">
+    </div>
+  </v-clicks>
   <div class="flex-1">
     <v-clicks :every='1'>
       <div>
@@ -482,11 +502,6 @@ HLS（HTTP Live Streaming）协议是由苹果公司提出的基于 HTTP 的流�
       </div>
     </v-clicks>
   </div>
-  <v-clicks :every='1'>
-  <div class="flex-1">
-      <img src="/hls.png" width="460">
-    </div>
-  </v-clicks>
 </div>
 
 ---
@@ -505,20 +520,7 @@ layout: two-cols
     <li>支持多平台：包括手机/电脑/电视等，可以在不同的平台上提供一致的视频体验。</li>
     <li>可以实现直播和点播：为视频网站提供了更多应用场景。</li>
 </v-clicks>
----
-transition: slide-left
----
-# 视频嗅探
-播放地址不是静态的，并不存在于 HTML 中。如何抓取播放链接？
 
-<v-clicks :every='1'>
-  <div class="center middle">
-    <img src="/web_view.png" width="822">
-  </div>
-  <div class="mt8 text-gray-500">
-    将 WebView 的透明度设为 0 或者使用 headless 模式
-  </div>
-</v-clicks>
 
 ---
 transition: slide-left
@@ -595,13 +597,13 @@ layout: two-cols
 ---
 transition: slide-left
 ---
-# 总有些坑
+# 总有一些坑
 <div class="flex center">
   <img src="/cache_pool.svg">
 </div>
 
 <v-clicks>
-<li class="mt10">只需对 m3u8 做鉴权即可</li>
+<li class="mt10">m3u8 地址单次消费，无法同时给手机播放器和投屏使用</li>
 <li>文件系统: 
     <ul class="ml8">
         <li>temp 文件夹：用于存放临时文件。这个文件夹里面的文件会被手机管家清理掉。</li>
@@ -619,12 +621,12 @@ transition: slide-left
       <h3>静态资源的抓取</h3>
         <li> GraphQL -> AST -> Crawler Schema -> HTML -> DOM -> 静态资源 -> 列表页和详情页的展示  </li>
       <h3>视频播放</h3>
-        <li>HLS 协议：M3U8 + TS + HTTP</li>
         <li>视频嗅探：通过 WebView 捕获视频资源地址(x.m3u8/x.mp4) </li>
+        <li>HLS 协议：M3U8 + TS + HTTP</li>
       <h3>投屏</h3>
         <li>DLNA 协议：通过这种跨平台的标准化协议，将手机上获取到的视频地址传输到电视上播放 </li>
         <li>DLNA 原理：通过控制器，服务器，渲染器和播放器的协作，实现设备之间的互联互通</li>
         <li>SSDP 简单服务发现协议：可以让设备在同一网络上发现彼此的存在</li>
-        <li>链接只能单次消费的解决方案：引入缓存池，将获取到的 m3u8/mp4 文件保存下来，然后将手机作为服务器，向电视提供播放地址 </li>
+        <li>踩过的坑：引入缓存池，将获取到的 m3u8/mp4 文件保存下来，然后将手机作为服务器，向电视提供播放地址 </li>
 </v-clicks>
 

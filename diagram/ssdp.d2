@@ -1,0 +1,18 @@
+shape: sequence_diagram
+
+Client: {
+ 通知其他设备自己的存在
+}
+
+Router: {
+}
+
+Client -> Router: 发送 SSDP 搜索请求
+Router -> Device1: 广播 Client 设备信息、IP地址、端口号
+Router -> Device2: 广播 Client 设备信息、IP地址、端口号
+
+Device1: {
+向客户端返回设备信息、IP地址、端口号
+}
+Device2 -> Client: 返回搜索响应
+Device1 -> Client: 返回搜索响应
