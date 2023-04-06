@@ -255,7 +255,6 @@ layout: two-cols
 - @_def
 - ...
 
-<v-clicks>
 ```graphql
 {
   videos @_dom_query(selector: ".myui-vodlist") {
@@ -265,12 +264,11 @@ layout: two-cols
   }
 }
 ```
-</v-clicks>
 
 ::right::
 # Directives
 
-- 标记如何获取该数据
+- 通过指令来标记如何获取该数据
 - 每个指令对应一个函数
 - 通过组合 directives，应对复杂业务场景
 - 通过扩展 directives，应对需求变化
@@ -441,7 +439,7 @@ transition: slide-left
 transition: slide-left
 ---
 # 如何解析
-GraphQL AST -> Crawler Schema 
+GraphQL AST(对源代码语法的抽象解释) 
 
 <img src="/ast.png">
 
@@ -468,11 +466,8 @@ transition: slide-left
 播放地址不是静态的，并不存在于 HTML 中。如何抓取播放链接？
 
 <v-clicks :every='1'>
-  <div class="center middle">
+  <div class="center middle mt20">
     <img src="/web_view.png" width="822">
-  </div>
-  <div class="mt8 text-gray-500">
-    将 WebView 的透明度设为 0 或者使用 headless 模式
   </div>
 </v-clicks>
 
@@ -518,7 +513,7 @@ layout: two-cols
 <v-clicks>
     <li>适应不同网络状况：可以根据当前网络情况自动调整码率和分辨率</li>
     <li>支持多平台：包括手机/电脑/电视等，可以在不同的平台上提供一致的视频体验。</li>
-    <li>可以实现直播和点播：为视频网站提供了更多应用场景。</li>
+    <li>可以实现直播和点播：为视频网站提供了更多应用场景</li>
 </v-clicks>
 
 
